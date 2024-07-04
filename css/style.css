@@ -1,0 +1,18 @@
+﻿body {
+  color: green;
+}
+h1,
+h2 {
+  color: red;
+  font-style: italic;
+}
+p {
+  color: purple;
+}
+#response {
+  color: yellow;
+}
+.sec {
+  color: orange;
+  font-style: italic;
+}
