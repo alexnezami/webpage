@@ -22,46 +22,117 @@ p {
   margin: 0px;
   box-sizing: border-box;
 }
+:root {
+  --PRIMARY-COLOR: #212529;
+  --SECONDARY-COLOR: #495057;
+  --LIGHT-COLOR: #d9d9d9;
+  --BG-COLOR: #fff;
+  --BG-BANNER: #3e91e3;
+}
+img {
+  display: block;
+}
 body {
   font-family: "Times New Roman", Times, serif;
-  direction: "auto";
+  color: var(--PRIMARY-COLOR);
+  direction: "ltr";
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
-.navigations-links li {
+
+.header-nav {
+  border-bottom: 1px solid var(--LIGHT-COLOR);
+  box-shadow: 0 1px 2px 0 var(--LIGHT-COLOR);
+  position: fixed;
+  width: 100%;
+  background-color: var(--BG-COLOR);
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  min-height: 3rem;
+  align-items: center;
+}
+header {
+  background-image: url("../images/cloud.png"),
+    linear-gradient(var(--BG-COLOR), var(--BG-BANNER));
+  background-position: bottom -120px left 120%;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 500px;
+}
+nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 1rem;
+}
+/* .navigations-links li {
   display: inline-block;
   padding: 0.5rem;
-}
+} */
+
+/* .header-nav li {
+  display: inline-block;
+  padding: 0.5rem;
+} */
 a:link,
-a:visited {
+a:visited,
+a:active {
   text-decoration: none;
-  color: rgba(0, 0, 0, 0.7);
+  color: var(--PRIMARY-COLOR);
 }
 a:hover {
   text-decoration: underline;
-  color: rgba(0, 0, 0, 0.9);
+  color: var(--SECONDARY-COLOR);
 }
-a:active {
-  text-decoration: none;
-  color: rgba(0, 0, 0, 0.7);
-}
-.header-nav {
-  border-bottom: 1px solid #d9d9d9;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
-  position: fixed;
-  width: 100%;
-  background-color: #fff;
-  top: 0;
-}
+
 h1,
 h2 {
   text-align: center;
 }
 h1 {
   /* font-size: 52px; */
+  margin-top: 5rem;
   font-size: 4rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 h2 {
   /* text-align: center; */
-  font-size: 1.4rem;
-  font-weight: 300;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+main {
+  flex-grow: 1;
+}
+
+.info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.summary-laptop {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border: 1px solid red;
+}
+.summary-laptop img {
+  width: 50%;
+  height: auto;
+}
+
+.features_items {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  width: 50%;
+}
+.features_item {
+  padding: 2rem;
+  box-shadow: 0 0 8px 0 var(--BG-BANNER);
 }
