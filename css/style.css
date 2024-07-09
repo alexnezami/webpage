@@ -28,6 +28,8 @@ p {
   --LIGHT-COLOR: #d9d9d9;
   --BG-COLOR: #fff;
   --BG-BANNER: #3e91e3;
+  --CARD-SHADOW-COLOR: #97d0f3;
+  --card-number-color: #369afe;
 }
 img {
   display: block;
@@ -41,7 +43,7 @@ body {
   flex-direction: column;
 }
 
-.header-nav {
+.header__nav {
   border-bottom: 1px solid var(--LIGHT-COLOR);
   box-shadow: 0 1px 2px 0 var(--LIGHT-COLOR);
   position: fixed;
@@ -68,15 +70,15 @@ nav ul {
   display: flex;
   gap: 1rem;
 }
-/* .navigations-links li {
+.navigations-links li {
   display: inline-block;
-  padding: 0.5rem;
-} */
+  padding: 0.4rem;
+}
 
-/* .header-nav li {
+.header-nav li {
   display: inline-block;
   padding: 0.5rem;
-} */
+}
 a:link,
 a:visited,
 a:active {
@@ -89,7 +91,7 @@ a:hover {
 }
 
 h1,
-h2 {
+h3 {
   text-align: center;
 }
 h1 {
@@ -100,7 +102,7 @@ h1 {
 }
 h2 {
   /* text-align: center; */
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 400;
   margin-top: 2rem;
   margin-bottom: 3rem;
@@ -119,7 +121,7 @@ main {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  border: 1px solid red;
+  border: 2px solid var(--card-number-color);
 }
 .summary-laptop img {
   width: 50%;
@@ -134,5 +136,53 @@ main {
 }
 .features_item {
   padding: 2rem;
+  margin: 0.5rem;
   box-shadow: 0 0 8px 0 var(--BG-BANNER);
+  border-radius: 8px;
+}
+.features_header {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.features_link:any-link {
+  display: block;
+  text-decoration: underline;
+  color: var(--BG-BANNER);
+}
+.cards {
+  background-image: url("../images/stat.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 15em 0;
+}
+
+.cards__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  gap: 2rem;
+}
+.card {
+  background-color: var(--BG-COLOR);
+  border-radius: 16px;
+  box-shadow: 0 0 16px -3px var(--CARD-SHADOW-COLOR);
+  padding: 16px 0;
+  text-align: center;
+  width: max(400px, 20vw);
+}
+
+.card__number {
+  color: var(--card-number-color);
+  font-size: 2rem;
+  font-weight: bold;
+}
+.card__item {
+  font-size: 1.5rem;
+  font-weight: bold;
 }
