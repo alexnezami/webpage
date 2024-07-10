@@ -45,6 +45,10 @@ p {
   --FS-M: 1.5rem;
   --FS-L: 2rem;
   --FS-XL: 4rem;
+
+  /* STANDARD PADDING */
+  --PADDING-TB: 0.5em;
+  --PADDING-SIDE: 2.5%;
 }
 img {
   display: block;
@@ -56,6 +60,17 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+input,
+button {
+  font: inherit;
+  border-radius: 4px;
+  width: 100%;
+  padding: var(--PADDING-TB) var(--PADDING-SIDE);
+}
+button:hover {
+  cursor: pointer;
 }
 
 .header__nav {
@@ -201,6 +216,30 @@ main {
 .card__item {
   font-size: 1.5rem;
   font-weight: bold;
+}
+/* AUTHENTICATION */
+.auth-page {
+  background-color: var(--AUTH-BG-COLOR);
+}
+.auth {
+  max-width: 360px;
+  width: 100%;
+  margin: 5em auto;
+  padding: 5em var(--PADDING-SIDE);
+  box-shadow: 0 0 8px -6px var(--TEXT-FADE-COLOR);
+  background-color: var(--BG-COLOR);
+}
+
+.auth__form-signup {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.auth__btn-signup {
+  background-color: var(--BTN-SIGNUP-COLOR);
+  color: var(--BG-COLOR);
 }
 
 @media all and (max-width: 768px) {
