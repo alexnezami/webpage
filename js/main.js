@@ -1,4 +1,5 @@
 ﻿"use strict";
+import { Student, greet, x as xExport } from "./modules/student.js";
 document.addEventListener("keydown", (event) => {
   if (event.key === "u" && event.ctrlKey) {
     event.preventDefault();
@@ -119,26 +120,7 @@ jobs.set(1, "test key type");
 console.log(jobs);
 */
 
-class Student {
-  #studentNumber;
-  #studentName;
-  constructor(studentNumber, studentName) {
-    this.#studentNumber = studentNumber;
-    this.#studentName = studentName;
-  }
-
-  set studentName(st) {
-    this.#studentName = st;
-  }
-  get studentName() {
-    return this.#studentName;
-  }
-  enroll(courseName) {
-    return `${this.#studentName} enrolled in ${courseName}`;
-  }
-}
-
-const s1 = new Student(1234, "Alex Nezami");
-console.log(s1);
+const s1 = new Student(5555, "Alice Nezami");
 console.log(s1.studentName);
-console.log(s1.enroll("Internet security"));
+console.log(greet("David"));
+console.log(xExport);
