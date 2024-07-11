@@ -72,7 +72,17 @@ button {
 button:hover {
   cursor: pointer;
 }
-
+.header__mobile-nav {
+  display: none;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: var(--PADDING-TB) var(--PADDING-SIDE);
+}
+.header__mobile-nav--item {
+  height: 0.25rem;
+  width: 2rem;
+  background-color: var(--TEXT-COLOR);
+}
 .header__nav {
   border-bottom: 1px solid var(--LIGHT-COLOR);
   box-shadow: 0 1px 2px 0 var(--LIGHT-COLOR);
@@ -250,7 +260,14 @@ main {
     position: relative;
   }
   .header__ul {
+    display: none;
     flex-direction: column;
+  }
+  .header__ul.active {
+    display: flex;
+  }
+  .header__mobile-nav {
+    display: flex;
   }
 }
 
