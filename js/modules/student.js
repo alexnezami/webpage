@@ -1,19 +1,19 @@
 ﻿class Student {
-  #studentNumber;
-  #studentName;
+  studentNumber;
+  studentName;
   constructor(studentNumber, studentName) {
-    this.#studentNumber = studentNumber;
-    this.#studentName = studentName;
+    this.studentNumber = studentNumber;
+    this.studentName = studentName;
   }
 
   set studentName(st) {
-    this.#studentName = st;
+    this.studentName = st;
   }
   get studentName() {
-    return this.#studentName;
+    return this.studentName;
   }
   enroll(courseName) {
-    return `${this.#studentName} enrolled in ${courseName}`;
+    return `${this.studentName} enrolled in ${courseName}`;
   }
 }
 

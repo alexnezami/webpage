@@ -1,5 +1,7 @@
 ﻿"use strict";
+
 import { Student, greet, x as xExport } from "./modules/student.js";
+
 document.addEventListener("keydown", (event) => {
   if (event.key === "u" && event.ctrlKey) {
     event.preventDefault();
@@ -118,9 +120,17 @@ jobs.set("Alex", "PM");
 jobs.set("Alice", "Dev");
 jobs.set(1, "test key type");
 console.log(jobs);
-*/
+
 
 const s1 = new Student(5555, "Alice Nezami");
 console.log(s1.studentName);
 console.log(greet("David"));
 console.log(xExport);
+
+const s1JSON = JSON.stringify(s1);
+console.log(s1JSON);
+console.log(typeof s1JSON);
+
+const s1Obj = JSON.parse(s1JSON);
+console.log(s1Obj);
+*/
