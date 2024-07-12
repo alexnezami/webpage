@@ -134,3 +134,13 @@ console.log(typeof s1JSON);
 const s1Obj = JSON.parse(s1JSON);
 console.log(s1Obj);
 */
+
+const person = "{'Alex', 36}";
+try {
+  const personJSON = JSON.parse(person);
+} catch (error) {
+  console.log(error.name);
+  console.log(error.message);
+} finally {
+  console.log("continue test app");
+}
